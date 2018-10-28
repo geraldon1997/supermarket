@@ -34,7 +34,7 @@ if(isset($_GET['invoice'])){
 
 <a href="create_transaction.php">create transaction</a> |
 <a href="create_supply.php">create supply</a> |
-<a href="view_suppliers">view suppliers</a> |
+<a href="view_suppliers.php">view suppliers</a> |
 <a href="add_supplier.php">add supplier</a> |
 <a href="delete_supplier.php">delete supplier</a> |
 <a href="create_transaction_page.php">create transaction</a> |

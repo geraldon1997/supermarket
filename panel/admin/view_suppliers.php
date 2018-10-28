@@ -4,7 +4,7 @@ include '../../links/db.php';
 
 $sql="SELECT * FROM `suppliers` ";
 $get=mysqli_query($con, $sql);
-echo "<table class='table table-bordered table-striped table-hover>";
+echo "<table class='table table-bordered table-striped table-hover'r>";
 while($row=mysqli_fetch_assoc($get)){
     $id=mysqli_real_escape_string($con, $row['id']);
     $name=mysqli_real_escape_string($con, $row['name']);

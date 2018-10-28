@@ -5,7 +5,7 @@ include '../../links/db.php';
 $sql="SELECT * FROM `arrivals` ORDER BY `id` DESC";
 $show_supply=mysqli_query($con, $sql);
 
-echo "<table  class='table table-bordered table-striped table-hover>";
+echo "<table class='table table-bordered table-striped table-hover'>";
 
 echo "<th>supplier</th>";
 echo "<th>product</th>";
