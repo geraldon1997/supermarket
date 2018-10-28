@@ -3,7 +3,7 @@ include '../../links/db.php';
 
 $view_users=mysqli_query($con, "SELECT * FROM users");
     echo "<div class='table-responsive'>";
-    echo "<table class='table table-bordered table-hover table-striped' style='box-shadow:3px 5px 25px 3px black;'>";
+    echo "<table class='table table-bordered table-hover table-striped'>";
     echo "<th class='text-center'>name</th>";
     echo "<th class='text-center'>username</th>";
     echo "<th class='text-center'>phone number</th>";

@@ -2,6 +2,10 @@
 
 include '../../links/db.php';
 
+$alert_type = '';
+
+$alert_message = '';
+
 if(isset($_GET['search'])){
     if(!empty($_GET['search_sales'])){
         $search=mysqli_real_escape_string($con, $_GET['search_sales']);
@@ -50,16 +54,20 @@ if(isset($_GET['search'])){
         echo "</div>";
 
     }else{
-        echo "<div class='alert alert-warning'>
-                <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                <h1 class='text-center'>THE SEARCH BOX CANNOT BE EMPTY</h1>
-              </div>";
+        $alert_type = 'warning';
+        $alert_message = 'Search box cannot be empty';
+        // echo "<div class='alert alert-warning'>
+        //         <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+        //         <span class='text-center'>THE SEARCH BOX CANNOT BE EMPTY</span>
+        //       </div>";
     }
 }else{
-        echo "<div class='alert alert-info'>
-                <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                <h1 class='text-center'>FILL THE SEARCH BOX TO GET SALES REPORT</h1>
-              </div>";
+    $alert_type = 'info';
+    $alert_message = 'Fill the search box to get sales report';
+        // echo "<div class='alert alert-info'>
+        //         <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+        //         <span class='text-center'>FILL THE SEARCH BOX TO GET SALES REPORT</span>
+        //       </div>";
 }
-
+// die($alert_message);
 ?>

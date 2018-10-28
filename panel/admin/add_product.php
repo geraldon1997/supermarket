@@ -35,12 +35,12 @@ if(isset($_POST['add_product'])){
                                         if($put_into_products){
                                             echo "<div class='alert alert-success'>
                                                     <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                                                    <h1 class='text-center'>product added successfully</h1>
+                                                    <span class='text-center'>product added successfully</span>
                                                 </div>";
                                         }else{
                                             echo    "<div class='alert alert-danger'>
                                                         <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                                                        <h1 class='text-center'>product not added</h1>
+                                                        <span class='text-center'>product not added</span>
                                                     </div>";
                                         }
                                     }
