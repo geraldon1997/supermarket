@@ -162,7 +162,7 @@
       <p class="card-category"></p>
     </div>
     <div class="card-body">
-      <div class="container-fluid text-center table-responsive">
+      <div class="text-center table-responsive">
 
         <?php include 'search_products.php'; ?>
       </div>

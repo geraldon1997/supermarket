@@ -38,7 +38,7 @@
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon">
-                        <span class="fa fa-phone"></span>
+                        <span class="la la-phone"></span>
                     </span>
                     <input type="number" name="new_tel" id="" class="form-control" placeholder="new mobile">
                 </div>
@@ -74,99 +74,121 @@
       <div class="modal-body text-center">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
           
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-user"></span>
-              </span>
-              <input type="text" name="fullname" id="" placeholder="full name" title="full name" class="form-control" required>
-            </div>
-          </div>
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="text" name="fullname" id="" placeholder="full name" title="full name" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-user"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
 
-           <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-user"></span>
-              </span>
-              <input type="text" name="user" id="" placeholder="username" title="username" class="form-control" required>
-            </div>
-          </div>
 
-           <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-lock"></span>
-              </span>
-              <input type="password" name="pass" id="" placeholder="password" title="password" class="form-control" required>
-            </div>
-          </div>
-
-           <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-map-marker"></span>
-              </span>
-              <input type="text" name="state" id="" placeholder="state" title="state" class="form-control" required>
-            </div>
-          </div>
-
-           <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-map-marker"></span>
-              </span>
-              <input type="text" name="town" id="" placeholder="town" title="town" class="form-control" required>
-            </div>
-          </div>
-
-           <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-map-marker"></span>
-              </span>
-              <input type="text" name="village" id="" placeholder="village" class="form-control" required>
-            </div>
-          </div>
-
-           <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-location-arrow"></span>
-              </span>
-              <input type="text" name="residence_addr" id="" placeholder="residential address" title="residential address" class="form-control" required>
-            </div>
-          </div>
-
-           <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-calendar"></span>
-              </span>
-              <input type="date" name="dob" id="" title="date of birth" class="form-control" required>
-            </div>
-          </div>
-
-           <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-phone"></span>
-              </span>
-              <input type="tel" name="tel" id="" placeholder="mobile" class="form-control" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <span class="fa fa-phone"></span>
-              </span>
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="text" name="user" id="" placeholder="username" title="username" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-user"></i></span>
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="password" name="pass" id="" placeholder="password" title="password" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-lock"></i></span>
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="text" name="state" id="" placeholder="state" title="state" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-map-marker"></i></span>
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="text" name="town" id="" placeholder="town" title="town" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-map-marker"></i></span>
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="text" name="village" id="" placeholder="village" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-map-marker"></i></span>
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="text" name="residence_addr" id="" placeholder="residential address" title="residential address" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-map-marker"></i></span>
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="date" name="dob" id="" title="date of birth" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-calendar"></i></span>
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
+                <input type="tel" name="tel" id="" placeholder="mobile" class="form-control" required>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-phone"></i></span>
+							</div>
+						</div>
+					</div>
+        </div>
+        
+        <div class="col-md-12">
+					<div class="form-group">
+						<div class="input-group has-icon">
                 <select name="position" id="" class="form-control">
-                  <option value="">---------- postion ----------</option>
-                  <option value="cashier">cashier</option>
-                  <option value="admin">admin</option>
+                      <option value="">---------- postion ----------</option>
+                      <option value="cashier">cashier</option>
+                      <option value="admin">admin</option>
                 </select>
-            </div>
-          </div>
+              <div class="input-group-append">
+								<span class="input-group-text input-group-icon"><i class="la la-user"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+
 
           <input type="submit" value="add user" name="add_user" class="btn btn-success">
 

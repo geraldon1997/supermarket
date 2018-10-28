@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
@@ -18,11 +18,11 @@
 
 
 
-    <div class="col-md-4 col-md-offset-4 login">
-    <div class="text-center" style="margin-bottom: 20px;">
+    <div class="col-md-4 offset-4 login">
+    <div class="text-center">
     <?php include 'links/login.php'; ?>   
 </div> 
-        <a href="index.php"><img src="assets/img/logo.png" alt="BICA PHARMACEUTICALS" width="400"></a>
+        <a href="index.php"><img src="assets/img/logo.png" alt="BICA PHARMACEUTICALS" width="425" class="img-responsive"></a>
         <br><br>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ;?>" method="post">
             

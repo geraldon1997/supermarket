@@ -90,7 +90,7 @@
             
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-12 text-center">
             <p>Bica Pharmaceuticals</p>
 
             <p>Ifite Awka, Anambra State.</p>

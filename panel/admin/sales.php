@@ -3,7 +3,7 @@
 <?php startblock('content') ?>
 <h4 class="page-title">Sales</h4>
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-6 col-offset-3">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Sales</h4>
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="row">  
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"><i class="fa fa-bar-chart"></i>Report</h4>
