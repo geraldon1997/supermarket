@@ -18,17 +18,17 @@ if(isset($_POST['login'])){
                             $ps=$row['position'];
 
                             if($ps == 'cashier'){
-                                echo "<h1 style='color:green;'><i class='fa fa-refresh fa-spin'></i> REDIRECTING</h1>";
+                                echo "<span style='color: green;'><i class='fa fa-refresh fa-spin'></i> Redirecting</span>";
                                 header('refresh:3 url=panel/user');
                                 $_SESSION['username']=$user;
                             }elseif($ps == 'admin'){
-                                echo "<h1 style='color:green;'><i class='fa fa-refresh fa-spin'></i> REDIRECTING</h1>";
+                                echo "<span style='color: green;'><i class='fa fa-refresh fa-spin'></i> Redirecting</span>";
                                 header('refresh:3 url=panel/admin');
                                 $_SESSION['username']=$user;   
                             }
                         }
                     }else{
-                        echo "<h1>you are not a user on this platform</h1>";
+                        echo "<span style='padding-bottom: 20px; color: red'>you are not a user on this platform</span>";
                     }
                 }
             

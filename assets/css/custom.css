@@ -1,0 +1,35 @@
+.login{
+    background-color: white;
+    margin-top: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.btn-primary{
+    border-radius: 0px;
+    background-color: #291247;
+    border-color: #291247;
+
+}
+
+.form-control{
+    border-radius: 0;
+    height: 40px;
+}
+
+.input-group-addon{
+    border-radius: 0;
+}
+
+.icon-color{
+    /* color: #291247; */
+    color: white;
+}
+
+.input-group-addon{
+    background-color: #291247;
+}
+
+.info{
+    color: white;
+}
