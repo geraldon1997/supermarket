@@ -6,13 +6,13 @@ if(isset($_GET['sales_person']) && isset($_GET['invoice'])){
     $invoice=mysqli_real_escape_string($con, $_GET['invoice']);
 $sql="SELECT * FROM cart WHERE sales_person='$usr' ";
 $get=mysqli_query($con, $sql);
-echo "<div class='col-md-12 text-center'>";
+
 echo "<a href='index.php?sales_person=$usr&invoice=$invoice' class='btn btn-default'>Dashboard</a>";
-echo "</div>";
+
 echo "<br><br><br>";
-echo "<div class='container'>";
-echo "<div class='row'>";
-echo "<div class='col-md-4 col-md-offset-4 text-center' style='font-family:georgia;'>";
+echo "<div class='col-md-8'>";
+
+echo "<div class='text-center' style='font-family:georgia;'>";
  
 echo "<p class='text-left'>".date('F d, Y').' | '.date('h:i:s').'&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Receipt :<b> #'.$invoice."</b></p>";
 echo "<img src='../../assets/img/logo.png' width='150' >";
@@ -47,6 +47,6 @@ echo "<hr>";
 echo "<a class='btn btn-primary' onclick='print();'>print</a>";
 echo "</div>";
 echo "</div>";
-echo "</div>";
+
 }
 ?>

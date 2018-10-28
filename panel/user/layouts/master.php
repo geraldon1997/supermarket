@@ -19,7 +19,7 @@ $user=mysqli_real_escape_string($con, $_SESSION['username']);
             <div class="main-panel">
 			<div class="content">
 				<div class="container-fluid">
-					<?php startblock('content') ?>
+                    <?php startblock('content') ?>
                     <?php endblock() ?>
                 </div>
 				</div>

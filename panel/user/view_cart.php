@@ -2,7 +2,7 @@
 
 include '../../links/db.php';
 
-$get_from_cart=mysqli_query($con, "SELECT * FROM cart WHERE sales_person='$usr' ");
+$get_from_cart=mysqli_query($con, "SELECT * FROM cart WHERE sales_person='$user' ");
                         echo "<table class='table table-bordered table-striped'>";
                         echo "<th>items</th>";
                         echo "<th>quantity</th>";
@@ -17,7 +17,7 @@ $get_from_cart=mysqli_query($con, "SELECT * FROM cart WHERE sales_person='$usr' 
                             echo "<td><a href='index.php?item=$item' class='btn btn-danger'><i class='fa fa-trash'></i> delete item</a></td>";
                             echo "</tr>";
                         }
-                        $result=mysqli_query($con, "SELECT SUM(price) AS price_sum FROM cart WHERE sales_person='$usr' ");
+                        $result=mysqli_query($con, "SELECT SUM(price) AS price_sum FROM cart WHERE sales_person='$user' ");
                             $row=mysqli_fetch_assoc($result);
                             echo "<tr>";
                             echo "<th>TOTAL</th>";
@@ -30,6 +30,6 @@ $get_from_cart=mysqli_query($con, "SELECT * FROM cart WHERE sales_person='$usr' 
                         
                         }else{
                             $invoice=rand(111111, 999999);
-                            echo "<a href='receipt.php?sales_person=$usr&invoice=$invoice' class='btn btn-success btn-block'>SELL</a>";
+                            echo "<a href='receipt.php?sales_person=$user&invoice=$invoice' class='btn btn-success btn-block'>SELL</a>";
                         }
 ?>

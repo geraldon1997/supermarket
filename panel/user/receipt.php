@@ -22,8 +22,18 @@ if(!isset($_SESSION['username'])){
 
 <style>
 @media print{ 
-  .btn{display:none;} 
-  body{width:250px;}
+  .btn{
+    display:none;
+    } 
+  
+  body{
+    text-align:center;
+    }
+  
+  div{
+    width:500px;
+    text-align:center;
+    }
   
   }
   </style>
@@ -32,30 +42,11 @@ if(!isset($_SESSION['username'])){
 </head>
 <body class="">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="#"><img src="../../assets/img/logo.png" height="150%" alt="" ></a>
-    </div>
-    
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-         <li><a href="#" style="color:white;"><span class="glyphicon glyphicon-user"></span> hello</a></li>
-         <li><a href="logout.php" style="color:white;">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
-         <li><a href="#" style="color:white;"><b><?php echo date('Y:m:d'); ?></b></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>    
 
-    <div>
+
+    <div class="col-md-6 col-md-offset-3 text-center">
       <?php include 'sales_receipt.php'; ?>
-    </div>
+      </div>
         
 
 

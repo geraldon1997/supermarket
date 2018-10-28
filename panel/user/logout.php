@@ -10,6 +10,6 @@ if(!isset($_SESSION['username'])){
   
 session_destroy();
 
-header('refresh:2 url=../../index.php');
+header('location:../../index.php');
 
 ?>

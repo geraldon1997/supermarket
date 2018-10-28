@@ -16,7 +16,7 @@ if(isset($_POST['add'])){
                 if($create_cart){
                   
                             $price = $q * $p;
-                            $add_to_cart=mysqli_query($con, "INSERT INTO cart (sales_person,item,quantity,price) VALUES ('$usr', '$it', '$q', '$price') ");
+                            $add_to_cart=mysqli_query($con, "INSERT INTO cart (sales_person,item,quantity,price) VALUES ('$user', '$it', '$q', '$price') ");
                             if($add_to_cart){
                                 include 'view_cart.php';
                             }else{
