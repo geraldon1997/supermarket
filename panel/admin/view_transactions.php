@@ -8,7 +8,7 @@ if(isset($_GET['invoice'])){
 
     $sql="SELECT * FROM `transactions` WHERE `invoice`='$iv' ";
     $view_tran=mysqli_query($con, $sql);
-    echo "<table>";
+    echo "<table class='table table-bordered table-striped table-hover'>";
     echo "<th>invoice</th>";
     echo "<th>supplier</th>";
     echo "<th>product</th>";
