@@ -1,8 +1,8 @@
 <?php
 // suppliers
 	$d = date('Y-m-d');
-	$no_suppliers = mysqli_query($con, "SELECT * FROM suppliers ");
-	$num_suppliers = mysqli_num_rows($no_suppliers);
+	$no_supplies = mysqli_query($con, "SELECT * FROM arrivals WHERE recipient='$user' ");
+	$num_supplies = mysqli_num_rows($no_supplies);
 //sales
 	$d = date('Y-m-d');
 	$raw_sales = mysqli_query($con, "SELECT * FROM sales WHERE date_sold='$d' ");
@@ -12,7 +12,10 @@
 	$products = mysqli_num_rows($p);
 //total sales
 	$ts=mysqli_query($con, "SELECT * FROM sales");
-    $total_sales = mysqli_num_rows($ts);
+	$total_sales = mysqli_num_rows($ts);
+// total user transaction
+	$tt=mysqli_query($con, "SELECT * FROM transactions WHERE creater='$user' ");
+	$total_transact = mysqli_num_rows($tt);
 	?>
 
 <div class="sidebar">
@@ -51,10 +54,10 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo $base_url?>panel/admin/supplies.php">
+					<a href="<?php echo $base_url?>panel/user/supplies.php">
 						<i class="la la-table"></i>
 						<p>Supplies</p>
-						<span class="badge badge-count"><?php echo $num_suppliers?></span>
+						<span class="badge badge-count"><?php echo $num_supplies?></span>
 					</a>
 				</li>
 				<li class="nav-item">
@@ -62,6 +65,13 @@
 						<i class="la la-keyboard-o"></i>
 						<p>Sales</p>
 						<span class="badge badge-count"><?php echo $daily_sales ?></span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo $base_url?>panel/user/transactions.php">
+						<i class="la la-keyboard-o"></i>
+						<p>Transactions</p>
+						<span class="badge badge-count"><?php echo $total_transact ?></span>
 					</a>
 				</li>
 				

@@ -19,7 +19,8 @@ if(isset($_POST['add_supplier'])){
                 $add_supplier=mysqli_query($con, $sql2);
 
                 if($add_supplier){
-                    echo "supplier added successfully";
+                    $alert_type = 'success';
+                    $alert_message = 'supplier added successfully';
                 }
             }else{
                 echo "supplier already exists";

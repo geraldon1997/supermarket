@@ -7,6 +7,7 @@ $show_supply=mysqli_query($con, $sql);
 
 echo "<table class='table table-bordered table-striped table-hover'>";
 
+echo "<th>Recipient</th>";
 echo "<th>supplier</th>";
 echo "<th>product</th>";
 echo "<th>quantity</th>";
@@ -19,6 +20,7 @@ echo "<th>options</th>";
 
 while($row=mysqli_fetch_assoc($show_supply)){
     $id=mysqli_real_escape_string($con, $row['id']);
+    $r=mysqli_real_escape_string($con, $row['recipient']);
     $sn=mysqli_real_escape_string($con, $row['supplier_name']);
     $ps=mysqli_real_escape_string($con, $row['product_supplied']);
     $q=mysqli_real_escape_string($con, $row['quantity']);
@@ -30,6 +32,7 @@ while($row=mysqli_fetch_assoc($show_supply)){
 
     echo "<tr>";
     
+    echo "<td>".$r."</td>";
     echo "<td>".$sn."</td>";
     echo "<td>".$ps."</td>";
     echo "<td>".$q."</td>";

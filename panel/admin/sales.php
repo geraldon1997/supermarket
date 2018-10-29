@@ -11,13 +11,16 @@
                     </div>
                     <div class="card-body">
                         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="get">
-                            <input type="date" name="search_sales" id="" class="form-control" title="search for sales"/><br>
+                            <div class="form-group">
+                                <input type="date" name="search_sales" id="" class="form-control" title="select your desired date"/>
+                            </div>
+                            
                             <input type="submit" value="search" name="search" class="btn btn-info">
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         <div class="row">  
             <div class="col-md-12">
                 <div class="card">
@@ -26,7 +29,7 @@
                         <p class="card-category"></p>
                     </div>
                     <div class="card-body">
-                        <div class="container-fluid text-center table-responsive">
+                        <div class="text-center table-responsive">
 
                             <?php include 'search_sales.php'; ?>
                         </div>

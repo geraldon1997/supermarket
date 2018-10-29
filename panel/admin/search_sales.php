@@ -7,11 +7,13 @@ $alert_type = '';
 $alert_message = '';
 
 if(isset($_GET['search'])){
-    if(!empty($_GET['search_sales'])){
+    if(isset($_GET['search_sales'])){
         $search=mysqli_real_escape_string($con, $_GET['search_sales']);
+        
+
         $get_sales=mysqli_query($con, "SELECT * FROM sales WHERE date_sold like '%$search%' ORDER BY date_sold DESC ");
-        echo "<div class='table-responsive'>";
-        echo "<table class='table table-bordered table-responsive table-striped table-hover'>";  
+        
+        echo "<table class='table table-bordered table-striped table-hover'>";  
         echo "<th class='text-center'>cashier</th>";
         echo "<th class='text-center'>receipt no</th>";
         echo "<th class='text-center'>product sold</th>";
@@ -39,15 +41,16 @@ if(isset($_GET['search'])){
         echo "</tr>";
 
         }
-        $result=mysqli_query($con, "SELECT SUM(amount_sold) AS total FROM sales WHERE date_sold='$search' ");
+        $result=mysqli_query($con, "SELECT SUM(amount_sold) AS total FROM sales WHERE date_sold ='$search' ");
         $row=mysqli_fetch_assoc($result);
         
+        echo "<tr>";
         echo "<td colspan='4'><strong>Total</strong></td>";
         echo "<td colspan='3'>".$total=$row['total']."</td>";
-
+        echo "</tr>";
 
         echo "</table>";
-        echo "</div>";
+        
 
     }else{ 
         $alert_type = 'warning';

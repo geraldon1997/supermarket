@@ -4,6 +4,7 @@ include '../../links/db.php';
 if(isset($_POST['create_transaction'])){
     if(!empty($_POST['t_s']) && !empty($_POST['t_pro']) && !empty($_POST['t_q']) && !empty($_POST['t_a']) && !empty($_POST['t_b']) && !empty($_POST['t_pri']) && !empty($_POST['t_i'])){
         
+        $user=mysqli_real_escape_string($con, $_SESSION['username']);
         $t_s=mysqli_real_escape_string($con, $_POST['t_s']);
         $t_pro=mysqli_real_escape_string($con, $_POST['t_pro']);
         $t_q=mysqli_real_escape_string($con, $_POST['t_q']);
@@ -12,7 +13,7 @@ if(isset($_POST['create_transaction'])){
         $t_pri=mysqli_real_escape_string($con, $_POST['t_pri']);
         $t_i=mysqli_real_escape_string($con, $_POST['t_i']);
 
-    $sql="CREATE TABLE IF NOT EXISTS `transactions` (id INT AUTO_INCREMENT PRIMARY KEY, supplier VARCHAR(40), invoice INT(11), product VARCHAR(40), quantity INT(11), amount_paid INT(11), balance INT(11), price INT(11), date_paid VARCHAR(20)) ";
+    $sql="CREATE TABLE IF NOT EXISTS `transactions` (id INT AUTO_INCREMENT PRIMARY KEY, creater VARCHAR(20),supplier VARCHAR(40), invoice INT(11), product VARCHAR(40), quantity INT(11), amount_paid INT(11), balance INT(11), price INT(11), date_paid VARCHAR(20)) ";
     $create_transaction_table=mysqli_query($con, $sql);
     
     if($create_transaction_table){
@@ -22,7 +23,7 @@ if(isset($_POST['create_transaction'])){
                 $t_d=date('d/M/Y');
 
                
-                $sql1="INSERT INTO `transactions` (supplier,invoice,product,quantity,amount_paid,balance,price,date_paid) VALUES ('$t_s','$t_i','$t_pro','$t_q','$t_a','$new_balance','$t_pri','$t_d') ";
+                $sql1="INSERT INTO `transactions` (creater,supplier,invoice,product,quantity,amount_paid,balance,price,date_paid) VALUES ('$user','$t_s','$t_i','$t_pro','$t_q','$t_a','$new_balance','$t_pri','$t_d') ";
                 $insert_transaction=mysqli_query($con, $sql1);
 
             if($insert_transaction){

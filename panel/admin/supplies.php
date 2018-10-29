@@ -8,9 +8,9 @@ startblock('content');?>
 <button data-target="#add_supplier" data-toggle="modal" class="btn btn-info">Add Supplier</button>
 <button data-target="#create_supply" data-toggle="modal" class="btn btn-primary">Create Supply</button>
 <hr>
-<?php include 'add_supplier.php' ?>
-
-<?php include 'view_supply.php' ?>
+<?php include 'add_supplier.php'; ?>
+<?php include 'create_supply.php'; ?>
+<?php include 'view_supply.php'; ?>
 
 
 
@@ -52,25 +52,40 @@ startblock('content');?>
       </div>
       <div class="modal-body">
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-            
-        <select name="supplier_name" id="" class="form-control">
-            <option value="choose a supplier">choose a supplier</option>
-                <?php
-                    $sql="SELECT * FROM `suppliers` ";
-                    $get=mysqli_query($con, $sql);
 
-                while($row=mysqli_fetch_assoc($get)){
-                    $name=mysqli_real_escape_string($con, $row['name']);
-                echo "<option>".$name."</option><br>";
-                }
-                ?>
-        </select>
-        <input type="text" name="product_supplied" id="" class="form-control">
-        <input type="number" name="quantity" id="" class="form-control">
-        <input type="number" name="price" id="" class="form-control">
-        <input type="number" name="invoice" id="" value="<?php echo rand(111111, 999999); ?>" class="form-control">
-        <input type="submit" value="create supply" name="create_supply" class="btn btn-primary">
-          
+        <div class="form-group">    
+          <select name="supplier_name" id="" class="form-control">
+              <option value="choose a supplier">choose a supplier</option>
+                  <?php
+                      $sql="SELECT * FROM `suppliers` ";
+                      $get=mysqli_query($con, $sql);
+
+                  while($row=mysqli_fetch_assoc($get)){
+                      $name=mysqli_real_escape_string($con, $row['name']);
+                  echo "<option>".$name."</option><br>";
+                  }
+                  ?>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="product_supplied" id="" class="form-control" placeholder="product supplied">
+        </div>
+
+        <div class="form-group">
+          <input type="number" name="quantity" id="" class="form-control" placeholder="quantity supplied">
+        </div>
+
+        <div class="form-group">
+          <input type="number" name="price" id="" class="form-control" placeholder="total price">
+        </div>
+
+        <div class="form-group">
+          <input type="hidden" name="invoice" id="" value="<?php echo rand(111111, 999999); ?>" class="form-control">
+        </div>
+
+          <input type="submit" value="create supply" name="create_supply" class="btn btn-primary">
+
         </form>
         
       </div>
@@ -84,3 +99,6 @@ startblock('content');?>
 
 
 <?php endblock(); ?>
+
+
+

@@ -1,16 +1,14 @@
-<?php 
-include 'layouts/master.php';
-include '../../links/db.php';
-startblock('content');
+<?php
 
-if(isset($_GET['invoice'])){
-    $iv=mysqli_real_escape_string($con, $_GET['invoice']);
-    
+if(isset($_GET['search']) && !empty($_GET['search_trans'])){
+    $search=mysqli_real_escape_string($con, $_GET['search_trans']);
 
-    $sql="SELECT * FROM `transactions` WHERE `invoice`='$iv' ";
+$sql="SELECT * FROM `transactions` WHERE `invoice` like '%$search%'  ";
     $view_tran=mysqli_query($con, $sql);
-    echo "<div class='text-center' id='print'>";
+
+    if(mysqli_num_rows($view_tran) !== 0){
     echo "<table class='table table-bordered table-striped table-hover'>";
+    echo "<th>created by</th>";
     echo "<th>invoice</th>";
     echo "<th>supplier</th>";
     echo "<th>product</th>";
@@ -21,6 +19,7 @@ if(isset($_GET['invoice'])){
     echo "<th>total</th>";
 
     while($row=mysqli_fetch_assoc($view_tran)){
+        $cr=mysqli_real_escape_string($con, $row['creater']);
         $invoice=mysqli_real_escape_string($con, $row['invoice']);
         $name=mysqli_real_escape_string($con, $row['supplier']);
         $product=mysqli_real_escape_string($con, $row['product']);
@@ -31,6 +30,7 @@ if(isset($_GET['invoice'])){
         $total=mysqli_real_escape_string($con, $row['price']);
     
         echo "<tr>";
+        echo "<td>".$cr."</td>";
         echo "<td>".$invoice."</td>";
         echo "<td>".$name."</td>";
         echo "<td>".$product."</td>";
@@ -42,24 +42,17 @@ if(isset($_GET['invoice'])){
         echo "</tr>";
     }
 
-    echo "</table>";
-    echo "<a class='btn btn-primary' onclick='print();' style='color:white;'>print</a>";
-    echo "</div>";
-}
-endblock();
-?>
+    $get_tpaid=mysqli_query($con, "SELECT SUM(amount_paid) as tpaid FROM transactions WHERE invoice='$search' ");
+    $row=mysqli_fetch_assoc($get_tpaid);
+    $tpaid=mysqli_real_escape_string($con, $row['tpaid']);
 
-<style>
-@media print{
-    .btn{
-        display:none;
-    }
-    div .sidebar{
-        display:none;
-    }
-    div .main-header{
-        display:none;
-    }
-    
+    echo "<tr>";
+    echo "<td colspan='6'><b>Total</b></td>";
+    echo "<td colspan='3'><b>".$tpaid."</b></td>";
+    echo "</tr>";
+    echo "</table>";
+}else{
+    echo "<p style='color:red;'>No transaction was found for #".$search."</p>";
 }
-</style>
+}
+?>
