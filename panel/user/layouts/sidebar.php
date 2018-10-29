@@ -51,9 +51,9 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="<?php echo $base_url?>panel/admin/suppliers.php">
+					<a href="<?php echo $base_url?>panel/admin/supplies.php">
 						<i class="la la-table"></i>
-						<p>Suppliers</p>
+						<p>Supplies</p>
 						<span class="badge badge-count"><?php echo $num_suppliers?></span>
 					</a>
 				</li>

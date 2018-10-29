@@ -59,10 +59,10 @@
             $sql7="UPDATE products SET current_quantity='$cu' WHERE product_name='$item' ";
             $insert_if_not_null=mysqli_query($con, $sql7);
             echo "no";
-          }elseif($c_q == NULL){
-            $sql8="UPDATE products SET current_quantity='$c_u' WHERE product_name='$item' ";
-            $insert_if_null=mysqli_query($con, $sql8);
-            echo "yesss";
+          // }elseif($c_q == NULL){
+          //   $sql8="UPDATE products SET current_quantity='$c_u' WHERE product_name='$item' ";
+          //   $insert_if_null=mysqli_query($con, $sql8);
+          //   echo "yesss";
           }
           $delete_cart=mysqli_query($con, "DELETE FROM cart WHERE sales_person='$usr' ");
           if($delete_cart){

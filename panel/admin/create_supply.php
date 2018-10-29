@@ -33,27 +33,3 @@ if(isset($_POST['create_supply'])){
     }
 }
 ?>
-
-<form action="create_supply.php" method="post">
-<select name="supplier_name" id="">
-<option value="choose a supplier">choose a supplier</option>
-<?php
-
-include '../../links/db.php';
-
-$sql="SELECT * FROM `suppliers` ";
-$get=mysqli_query($con, $sql);
-
-while($row=mysqli_fetch_assoc($get)){
-    $name=mysqli_real_escape_string($con, $row['name']);
-    echo "<option>".$name."</option><br>";
-}
-
-?>
-</select>
-<input type="text" name="product_supplied" id="">
-<input type="number" name="quantity" id="">
-<input type="number" name="price" id="">
-<input type="number" name="invoice" id="" value="<?php echo rand(111111, 999999); ?>">
-<input type="submit" value="create supply" name="create_supply">
-</form>

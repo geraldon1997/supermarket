@@ -29,8 +29,8 @@ if(isset($_POST['add_product'])){
                                 $da=date('d/m/Y');
 
                                 $put_into_products=mysqli_query($con, "INSERT INTO products 
-                                (product_name,product_type,product_description,product_expiry_date,product_quantity,product_supplier,cost_price,selling_price,date_added) 
-                                VALUES ('$pn', '$pt', '$pd', '$ed', '$pq', '$su', '$cp', '$sp', '$da') ");
+                                (product_name,product_type,product_description,product_expiry_date,product_quantity,current_quantity,product_supplier,cost_price,selling_price,date_added) 
+                                VALUES ('$pn', '$pt', '$pd', '$ed', '$pq', '$pq', '$su', '$cp', '$sp', '$da') ");
 
                                         if($put_into_products){
                                             echo "<div class='alert alert-success'>

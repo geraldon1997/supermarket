@@ -1,7 +1,7 @@
 <div class="main-header">
 			<div class="logo-header">
-				<a href="index.html" class="logo">
-					Bica Dashboard
+				<a href="index.php" class="logo">
+				<img src="../../assets/img/logo.png" alt="BICA PHARMACY" height="30">	Bica Dashboard
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar"
 				 aria-expanded="false" aria-label="Toggle navigation">

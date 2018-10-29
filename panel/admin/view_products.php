@@ -34,10 +34,11 @@ while($row=mysqli_fetch_assoc($view_products)){
     echo "<td>".$pq."</td>";
     if($pc_q < 10){
         echo "<td style='color:red;'>".$pc_q."</td>";
-    }elseif($pc_q > 10){
-        echo "<td style='color:green;'>".$pc_q."</td>";
-    }else{
+    }elseif($pc_q < 1){
         echo "<td style='color:red;'>out of stock</td>";
+        
+    }else{
+        echo "<td style='color:green;'>".$pc_q."</td>";
     }
     echo "<td>".$ps."</td>";
     echo "<td>".$da."</td>";

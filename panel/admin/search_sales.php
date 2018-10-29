@@ -35,25 +35,21 @@ if(isset($_GET['search'])){
         echo "<td>".$q."</td>";
         echo "<td>N".$a."</td>";
         echo "<td>".$d."</td>";
-        echo "<td>"."<a href='../user/receipt.php' target='_blank' class='btn btn-info'><i class='fa fa-eye'></i> view</a>&nbsp"."&nbsp<a href='sales.php?id=$id' class='btn btn-danger'><i class='fa fa-trash'></i> delete</a>"."</td>";
+        echo "<td>"."<a href='view_sale.php?invoice=$in' target='_blank' class='btn btn-info'><i class='fa fa-eye'></i> view</a>&nbsp"."&nbsp<a href='sales.php?id=$id' class='btn btn-danger'><i class='fa fa-trash'></i> delete</a>"."</td>";
         echo "</tr>";
 
         }
         $result=mysqli_query($con, "SELECT SUM(amount_sold) AS total FROM sales WHERE date_sold='$search' ");
         $row=mysqli_fetch_assoc($result);
-        echo "<tr>";
-        echo "<th>Total</th>";
-        echo "<td></td>";
-        echo "<td></td>";
-        echo "<th>".$total=$row['total']."</th>";
-        echo "<td></td>";
-        echo "<td></td>";
-        echo "</tr>";
+        
+        echo "<td colspan='4'><strong>Total</strong></td>";
+        echo "<td colspan='3'>".$total=$row['total']."</td>";
+
 
         echo "</table>";
         echo "</div>";
 
-    }else{
+    }else{ 
         $alert_type = 'warning';
         $alert_message = 'Search box cannot be empty';
         // echo "<div class='alert alert-warning'>

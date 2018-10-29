@@ -3,8 +3,7 @@
 <?php startblock('content') ?>
 <h4 class="page-title"> Products</h4>
 <button style="margin-left: 20px" data-target="#add_product" data-toggle="modal" class="btn btn-info">Add Product</button>
-<br>
-<br>
+<hr>
 <!-- Modal -->
 <div id="add_product" class="modal fade" role="dialog">
   <div class="modal-dialog modal-md">
@@ -140,7 +139,7 @@
   <?php include 'delete_product.php'; ?>
   <div class="card">
     <div class="card-header">
-      <h4 class="card-title">Sales</h4>
+      <h4 class="card-title">Products</h4>
       <p class="card-category"></p>
     </div>
     <div class="card-body">
@@ -175,7 +174,22 @@
 <?php endblock() ?>
 
 <?php startblock('myscripts') ?>
-
+<?php if ($alert_type != ''){?>
+    <script>
+        $.notify({
+            icon: 'la la-bell',
+            title: 'Note',
+            message: '<?php echo $alert_message?>',
+        },{
+            type: '<?php echo $alert_type?>',
+            placement: {
+                from: "top",
+                align: "right"
+            },
+            time: 1000,
+        });
+    </script>
+    <?php }?>
 <script>
     function passId(id){
         $("#edit_id").val(id);

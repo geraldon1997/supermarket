@@ -40,7 +40,7 @@
 
 <?php startblock('myscripts') ?>
 <?php if ($alert_type != ''){?>
-    <script>
+    <script> 
         $.notify({
             icon: 'la la-bell',
             title: 'Note',

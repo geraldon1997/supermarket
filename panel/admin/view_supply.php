@@ -39,11 +39,12 @@ while($row=mysqli_fetch_assoc($show_supply)){
     echo "<td>".$da."</td>";
     echo "<td>".$st."</td>";
     
+    
 
     if($st == "fully paid"){
-        echo "<td><a href='view_transactions.php?invoice=$iv' class='btn success'>view transactions</a></td>";
+        echo "<td><a href='view_transactions.php?invoice=$iv' class='btn btn-info'>view transactions</a></td>";
     }else{
-        echo "<td><a href='create_transaction_page.php?invoice=$iv' class='btn' >create transaction</a></td>";
+        echo "<td><a href='create_transaction_page.php?invoice=$iv' class='btn btn-primary' >create transaction</a></td>";
     }
 
     echo "</tr>";

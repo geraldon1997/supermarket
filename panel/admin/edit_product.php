@@ -16,5 +16,9 @@ if(isset($_POST['update_quantity']) && !empty($_POST['new_quantity']) && !empty(
     $sql1="UPDATE products SET product_quantity='$n_q', current_quantity='$new_q', date_added='$d' WHERE id='$id' ";
     $edit_q=mysqli_query($con, $sql1);
     
+    if($edit_q){
+        $alert_type = 'success';
+        $alert_message = 'product updated successfully';
+    }
 }
 ?>

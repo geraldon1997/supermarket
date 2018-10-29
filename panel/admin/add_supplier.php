@@ -29,8 +29,3 @@ if(isset($_POST['add_supplier'])){
 }
 
 ?>
-
-<form action="add_supplier.php" method="post">
-<input type="text" name="supplier" id="">
-<input type="submit" value="add supplier" name="add_supplier">
-</form>

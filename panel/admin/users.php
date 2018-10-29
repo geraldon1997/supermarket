@@ -1,8 +1,9 @@
 <?php include 'layouts/master.php';?>
 
-<?php startblock('content') ?>
+<?php startblock('content') ?> 
+<h4 class="page-title">Staffs</h4>
         <!-- <h4 class="page-title">Sales</h4> -->
-        <button data-target="#add_staff" data-toggle="modal" class="btn btn-info">Add Staff</button><br><br>
+        <button data-target="#add_staff" data-toggle="modal" class="btn btn-info">Add Staff</button><hr>
         <div class="row">
             <div class="col-md-12">
                 <div class="card">

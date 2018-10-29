@@ -1,1 +1,9 @@
-<a href="https://web.facebook.com/photo/download/?fbid=2040967422629609&ext=1541023244&hash=AeR5J5I176HNNUIt" download>download</a>
+<?php 
+
+if(isset($_POST['try'])){
+    echo "try";
+}
+?>
+<form action="" method="post">
+<input type="submit" value="try" name="try">
+</form>

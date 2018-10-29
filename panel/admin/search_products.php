@@ -42,7 +42,7 @@ if(isset($_GET['search'])){
             
             echo "<td>".$ps."</td>";
             echo "<td>".$da."</td>";
-            echo "<td><a href='#edit' onclick='passId($id)' data-toggle='modal'><i class='fa fa-edit fa-fw'></i></a>  &nbsp   <a href='products.php?delete_product_id=$id'><i class='fa fa-trash' style='color:red'></i></a></td>";
+            echo "<td><a href='#edit' onclick='passId($id)' data-toggle='modal'><i class='fa fa-edit btn btn-primary'></i></a>  &nbsp   <a href='products.php?delete_product_id=$id'><i class='fa fa-trash btn btn-danger' style='color:white'></i></a></td>";
             echo "</tr>";
         }
             echo "</table>";

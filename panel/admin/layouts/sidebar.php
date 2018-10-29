@@ -11,7 +11,13 @@
 	$products = mysqli_num_rows($p);
 //total sales
 	$ts=mysqli_query($con, "SELECT * FROM sales");
-    $total_sales = mysqli_num_rows($ts);
+	$total_sales = mysqli_num_rows($ts);
+// total supply
+	$tsp=mysqli_query($con, "SELECT * FROM arrivals");
+	$total_supply = mysqli_num_rows($tsp);
+// total transactions
+	$trans=mysqli_query($con, "SELECT * FROM transactions");
+	$total_trans = mysqli_num_rows($trans);
 	?>
 
 <div class="sidebar">
@@ -70,7 +76,20 @@
 						<span class="badge badge-count"><?php echo $products?></span>
 					</a>
 				</li>
-				
+				<li class="nav-item">
+					<a href="<?php echo $base_url?>panel/admin/supplies.php">
+						<i class="la la-table"></i>
+						<p>Supplies</p>
+						<span class="badge badge-count"><?php echo $total_supply?></span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="<?php echo $base_url?>panel/admin/transactions.php">
+						<i class="la la-table"></i>
+						<p>Transactions</p>
+						<span class="badge badge-count"><?php echo $total_trans?></span>
+					</a>
+				</li>
 			</ul>
 		</div>
 	</div>

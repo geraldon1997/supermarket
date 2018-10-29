@@ -26,7 +26,7 @@ if(isset($_POST['create_transaction'])){
                 $insert_transaction=mysqli_query($con, $sql1);
 
             if($insert_transaction){
-                echo "transaction recorded";
+                
                 $sql2="UPDATE `arrivals` SET `balance`='$new_balance' WHERE `invoice`='$t_i' ";
                 $update_balance=mysqli_query($con, $sql2);
                 
@@ -41,6 +41,7 @@ if(isset($_POST['create_transaction'])){
                     $update_part_payment=mysqli_query($con, $sql4);
                 
                 }
+                 $base_url.'panel/admin/supplies.php';
             }
         }elseif($t_a == 0){
             echo "please enter a valid amount";

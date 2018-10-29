@@ -1,6 +1,7 @@
 <?php
+include 'layouts/master.php';
 include '../../links/db.php';
-if(isset($_GET['invoice'])){
+if(isset($_GET['invoice'])){ 
     $iv=mysqli_real_escape_string($con, $_GET['invoice']);
 
     $sql="SELECT * FROM `arrivals` WHERE `invoice`='$iv' ";
@@ -20,24 +21,67 @@ if(isset($_GET['invoice'])){
 }
 ?>
 
-<form action="create_transaction.php" method="post">
-<input type="text" name="t_s" id="" value="<?php echo $su; ?>" >
-<input type="text" name="t_pro" id="" value="<?php echo $p; ?>" >
-<input type="number" name="t_q" id="" value="<?php echo $q; ?>" >
-<input type="number" name="t_a" id="" value="5">
-<input type="number" name="t_b" id="" value="<?php echo $b; ?>" >
-<input type="number" name="t_pri" id="" value="<?php echo $t; ?>" >
-<input type="number" name="t_i" id="" value="<?php echo $iv; ?>" >
-<input type="submit" value="create transact" name="create_transaction" >
+<?php startblock('content') ?>
+<h4 class="page-title">Create transaction</h4>
+<?php include 'create_transaction.php'; ?>
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="col-8 offset-2 text-center">
+
+    <div class="form-group form-inline">
+		<label for="inlineinput" class="col-md-3 col-form-label">Supplier</label>
+			<div class="col-md-9 p-0">
+				<input type="text" class="form-control input-full" id="inlineinput" value="<?php echo $su ; ?>" name="t_s">
+			</div>
+	</div>
+
+    <div class="form-group form-inline">
+		<label for="inlineinput" class="col-md-3 col-form-label">Product supplied</label>
+			<div class="col-md-9 p-0">
+				<input type="text" class="form-control input-full" id="inlineinput" value="<?php echo $p ; ?>" name="t_pro">
+			</div>
+	</div>
+
+
+    <div class="form-group form-inline">
+		<label for="inlineinput" class="col-md-3 col-form-label">quantity</label>
+			<div class="col-md-9 p-0">
+				<input type="number" class="form-control input-full" id="inlineinput" value="<?php echo $q ; ?>" name="t_q">
+			</div>
+	</div>
+
+
+    <div class="form-group form-inline">
+		<label for="inlineinput" class="col-md-3 col-form-label">amount to be paid</label>
+			<div class="col-md-9 p-0">
+				<input type="number" class="form-control input-full" id="inlineinput" placeholder="enter amount you would like to pay" name="t_a">
+			</div>
+	</div>
+
+
+    <div class="form-group form-inline">
+		<label for="inlineinput" class="col-md-3 col-form-label">remaining balance</label>
+			<div class="col-md-9 p-0">
+				<input type="number" class="form-control input-full" id="inlineinput" value="<?php echo $b ; ?>" name="t_b">
+			</div>
+	</div>
+
+
+    <div class="form-group form-inline">
+		<label for="inlineinput" class="col-md-3 col-form-label">total price</label>
+			<div class="col-md-9 p-0">
+				<input type="number" class="form-control input-full" id="inlineinput" value="<?php echo $t ; ?>" name="t_pri">
+			</div>
+	</div>
+
+
+    <div class="form-group form-inline">
+		<label for="inlineinput" class="col-md-3 col-form-label">Invoice</label>
+			<div class="col-md-9 p-0">
+		    	<input type="number" class="form-control input-full" id="inlineinput" value="<?php echo $iv ; ?>" name="t_i">
+			</div>
+	</div>
+
+
+<input type="submit" value="create transaction" name="create_transaction" class="btn btn-success">
 </form>
 
-
-<a href="create_transaction.php">create transaction</a> |
-<a href="create_supply.php">create supply</a> |
-<a href="view_suppliers.php">view suppliers</a> |
-<a href="add_supplier.php">add supplier</a> |
-<a href="delete_supplier.php">delete supplier</a> |
-<a href="create_transaction_page.php">create transaction</a> |
-<a href="view_transactions.php">view transactions</a> |
-<a href="view_supply.php">view supply</a> |
-<a href="delete_transaction.php">delete transaction</a> |
+<?php endblock() ?>
