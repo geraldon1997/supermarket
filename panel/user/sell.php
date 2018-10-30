@@ -65,9 +65,10 @@
           //   echo "yesss";
           }
           $delete_cart=mysqli_query($con, "DELETE FROM cart WHERE sales_person='$usr' ");
+          
           if($delete_cart){
             header('location:index.php');
-         }
+          }
   
 
           }

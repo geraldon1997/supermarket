@@ -16,7 +16,9 @@
 
 					
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
-						
+						<li class="nav-item">
+							<b class="la la-calendar la-2x"></b><b><?php echo date('l, d F, Y'); ?></b> &nbsp
+						</li>
 						
 						<li class="nav-item dropdown">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">

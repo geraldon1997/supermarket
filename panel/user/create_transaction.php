@@ -42,7 +42,7 @@ if(isset($_POST['create_transaction'])){
                     $update_part_payment=mysqli_query($con, $sql4);
                 
                 }
-                 header('location:http://localhost/bica/panel/admin/supplies.php');
+                 header('location:http://localhost/bica/panel/user/supplies.php');
             }
         }elseif($t_a == 0){
             echo "please enter a valid amount";

@@ -7,7 +7,7 @@ if(isset($_GET['sales_person']) && isset($_GET['invoice'])){
 $sql="SELECT * FROM cart WHERE sales_person='$usr' ";
 $get=mysqli_query($con, $sql);
 
-echo "<a href='index.php?sales_person=$usr&invoice=$invoice' class='btn btn-default'>Dashboard</a>";
+echo "<a href='sell.php?sales_person=$usr&invoice=$invoice' class='btn btn-default'>Dashboard</a>";
 
 echo "<br><br><br>";
 echo "<div class='col-md-8'>";

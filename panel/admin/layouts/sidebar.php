@@ -75,7 +75,7 @@
 						<p>Products</p>
 						<span class="badge badge-count"><?php echo $products?></span>
 					</a>
-				</li>
+				</li> 
 				<li class="nav-item">
 					<a href="<?php echo $base_url?>panel/admin/supplies.php">
 						<i class="la la-table"></i>

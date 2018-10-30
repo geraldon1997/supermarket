@@ -52,7 +52,7 @@
 						<p>Dashboard</p>
 						<span class="badge badge-count"></span>
 					</a>
-				</li>
+				</li> 
 				<li class="nav-item">
 					<a href="<?php echo $base_url?>panel/user/supplies.php">
 						<i class="la la-table"></i>

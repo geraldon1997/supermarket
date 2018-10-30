@@ -2,7 +2,7 @@
 
 include '../../links/db.php';
 
-$sql="SELECT * FROM `arrivals` ORDER BY `id` DESC";
+$sql="SELECT * FROM `arrivals` WHERE recipient='$user' ORDER BY `id` DESC";
 $show_supply=mysqli_query($con, $sql);
 
 echo "<table class='table table-bordered table-striped table-hover'>";
@@ -45,9 +45,9 @@ while($row=mysqli_fetch_assoc($show_supply)){
     
 
     if($st == "fully paid"){
-        echo "<td><a href='view_transactions.php?invoice=$iv' class='btn btn-info'>view transactions</a> &nbsp <a href='delete_supply.php?id=$id' class='btn btn-danger'><i class='la la-trash'></i></a></td>";
+        echo "<td><a href='view_transactions.php?invoice=$iv' class='btn btn-info'>view transactions</a></td>";
     }else{
-        echo "<td><a href='create_transaction_page.php?invoice=$iv' class='btn btn-primary' >create transaction</a> &nbsp <a href='delete_supply.php?id=$id' class='btn btn-danger'><i class='la la-trash'></i></a></td>";
+        echo "<td><a href='create_transaction_page.php?invoice=$iv' class='btn btn-primary' >create transaction</a></td>";
     }
 
     echo "</tr>";

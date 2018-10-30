@@ -10,15 +10,15 @@ if(isset($_GET['search'])){
     if(!empty($_GET['search_sales'])){
         $search=mysqli_real_escape_string($con, $_GET['search_sales']);
         $get_sales=mysqli_query($con, "SELECT * FROM sales WHERE date_sold like '%$search%' AND user='$user' ORDER BY date_sold DESC ");
-        echo "<div class='table-responsive'>";
-        echo "<table class='table table-bordered table-responsive table-striped table-hover'>";  
+        
+        echo "<table class='table table-bordered table-striped table-hover'>";  
         echo "<th class='text-center'>cashier</th>";
         echo "<th class='text-center'>receipt no</th>";
         echo "<th class='text-center'>product sold</th>";
         echo "<th class='text-center'>quantity sold</th>";
         echo "<th class='text-center'>amount</th>";
         echo "<th class='text-center'>date sold</th>";
-        echo "<th class='text-center'>options</th>";
+       
     while($row=mysqli_fetch_assoc($get_sales)){
         $id=mysqli_real_escape_string($con, $row['id']);
         $u=mysqli_real_escape_string($con, $row['user']);
@@ -35,7 +35,7 @@ if(isset($_GET['search'])){
         echo "<td>".$q."</td>";
         echo "<td>N".$a."</td>";
         echo "<td>".$d."</td>";
-        echo "<td>"."<a href='../user/receipt.php' target='_blank' class='btn btn-info'><i class='fa fa-eye'></i> view</a>";
+        
         echo "</tr>";
 
         }
@@ -51,7 +51,7 @@ if(isset($_GET['search'])){
         echo "</tr>";
 
         echo "</table>";
-        echo "</div>";
+        
 
     }else{
         $alert_type = 'warning';

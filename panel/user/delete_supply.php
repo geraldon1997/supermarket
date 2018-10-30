@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
     $delete=mysqli_query($con, $sql);
 
     if($delete){
-        header('location:http://localhost/bica/panel/admin/supplies.php');
+        header($base_url.'panel/admin/supplies.php');
     }
 }
 ?>

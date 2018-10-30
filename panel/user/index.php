@@ -8,10 +8,10 @@ include 'layouts/master.php';
 <div class="col-md-5 pull-left">
 <?php include 'cart.php'; ?>
 <?php include 'del_cart.php'; ?>
-<?php include 'sell.php'; ?>
+
 </div>
 
-<div class="col-md-6 pull-right">
+<div class="col-md-7 pull-right">
 
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="get" class="well">
     

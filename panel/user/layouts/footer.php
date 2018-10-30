@@ -2,9 +2,10 @@
 				<div class="container-fluid">
 					
 					<div class="copyright ml-auto">
-						2018, made with
-						<i class="la la-heart heart text-danger"></i> by
-						<a href="http://www.themekita.com">ThemeKita</a>
+						
+						&copy
+						<a href="http://www.obcgroup.com">Orbit Brothers Communication</a>
+						<?php echo date('Y'); ?>
 					</div>
 				</div>
 			</footer>

@@ -133,7 +133,7 @@
 
 <!-- /.row -->
 
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-6 ">
   <?php include 'add_product.php'; ?>
 
   <?php include 'delete_product.php'; ?>
