@@ -6,8 +6,8 @@ include '../../links/db.php';
 <?php startblock('content'); ?>
 
 <h4 class='page-title'>Transactions</h4>
- <div class="row">
-            <div class="col-6 col-offset-3">
+        <div class="row">
+            <div class="col-6 col-offset-3" id="nt">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Search Transactions</h4>
@@ -23,9 +23,9 @@ include '../../links/db.php';
             </div>
         </div>
 
-        <div class="row">  
+        <div class="print">  
             <div class="col-md-12">
-                <div class="card">
+                <div class="card" id="tr">
                     <div class="card-header">
                         <h4 class="card-title"><i class="fa fa-bar-chart"></i>Transactions</h4>
                         <p class="card-category"></p>

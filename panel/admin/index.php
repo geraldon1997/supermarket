@@ -66,7 +66,7 @@
                     </div>
                 </div>
 </a>
-            <a href="#" class="col-md-3 link">
+            <a href="<?php echo $base_url?>panel/admin/sales.php" class="col-md-3 link">
                 <div class="card card-stats card-primary">
                     <div class="card-body ">
                         <div class="row">

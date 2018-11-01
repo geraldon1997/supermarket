@@ -51,8 +51,39 @@ $sql="SELECT * FROM `transactions` WHERE `invoice` like '%$search%'  ";
     echo "<td colspan='3'><b>".$tpaid."</b></td>";
     echo "</tr>";
     echo "</table>";
+    echo "<a class='btn btn-primary' onclick='print();' style='color:white;'>print</a>";
 }else{
     echo "<p style='color:red;'>No transaction was found for #".$search."</p>";
 }
 }
 ?>
+
+<style>
+
+@media print{
+    .btn{
+        display:none;
+    }
+    div .sidebar{
+        display:none;
+        max-width:10%;
+    }
+    div .main-header{
+        display:none;
+    }
+    div .row{
+        display:none;
+    }   
+    div .print{
+        min-width:1024px;
+        margin:0px;
+    }
+    footer{
+        display:none;
+    }
+    h4{
+        display:none;
+    }
+}
+
+</style>
