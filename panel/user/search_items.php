@@ -41,7 +41,12 @@ if(isset($_GET['search'])){
             }
             
             echo "<td><input type='number' name='p' value='$p' class='form-control'></td>";
-            echo "<td><input type='submit' class='btn btn-success' name='add' value='add to cart'></td>";
+            if($cq == 0){
+                echo "<td><input type='submit' class='btn btn-success' name='add' value='add to cart' disabled></td>";
+            }else{
+                echo "<td><input type='submit' class='btn btn-success' name='add' value='add to cart'></td>";
+            }
+            
             echo "</form>";
             echo "</tr>";
         }
