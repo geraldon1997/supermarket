@@ -27,11 +27,11 @@ if(isset($_GET['search'])){
             echo "<form action='index.php' method='post'>";
             echo "<td><input type='text' name='it' value='$it' class='form-control'></td>";
             if($cq == NULL){
-              echo "<td><input type='number' name='q' placholder='quantity' class='form-control'></td>";
+              echo "<td><input type='number' name='q' placholder='quantity' class='form-control' max='$cq'></td>";
             } elseif($cq == 0){
                 echo "<td>out of stock</td>";
             }else{
-                echo "<td><input type='number' name='q' placholder='quantity' class='form-control'></td>";
+                echo "<td><input type='number' name='q' placholder='quantity' class='form-control' max='$cq'></td>";
             }
             
             if($cq < 10){ 
