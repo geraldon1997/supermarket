@@ -15,7 +15,7 @@
 	$total_sales = mysqli_num_rows($ts);
 // total user transaction
 	$tt=mysqli_query($con, "SELECT * FROM transactions WHERE creater='$user' ");
-	$total_transact = mysqli_num_rows($tt);
+	$total_transact = mysqli_num_rows($tt);	
 	?>
 
 <div class="sidebar">
@@ -57,21 +57,21 @@
 					<a href="<?php echo $base_url?>panel/user/supplies.php">
 						<i class="la la-table"></i>
 						<p>Supplies</p>
-						<span class="badge badge-count"><?php echo $num_supplies?></span>
+						<span class="badge badge-count"><?php echo $num_supplies;?></span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo $base_url?>panel/user/sales.php">
 						<i class="la la-keyboard-o"></i>
 						<p>Sales</p>
-						<span class="badge badge-count"><?php echo $daily_sales ?></span>
+						<span class="badge badge-count"><?php echo $daily_sales ;?></span>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a href="<?php echo $base_url?>panel/user/transactions.php">
 						<i class="la la-keyboard-o"></i>
 						<p>Transactions</p>
-						<span class="badge badge-count"><?php echo $total_transact ?></span>
+						<span class="badge badge-count"><?php //echo $total_transact ;?></span>
 					</a>
 				</li>
 				

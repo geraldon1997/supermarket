@@ -14,7 +14,7 @@ $get_from_cart=mysqli_query($con, "SELECT * FROM cart WHERE sales_person='$user'
                             echo "<td>".$item."</td>";
                             echo "<td>".$row['quantity']."</td>";
                             echo "<td>N ".$row['price']."</td>";
-                            echo "<td><a href='index.php?item=$item' class='btn btn-danger'><i class='fa fa-trash'></i> delete item</a></td>";
+                            echo "<td><a href='del_cart.php?item=$item' class='btn btn-danger'><i class='fa fa-trash'></i> delete item</a></td>";
                             echo "</tr>";
                         }
                         $result=mysqli_query($con, "SELECT SUM(price) AS price_sum FROM cart WHERE sales_person='$user' ");

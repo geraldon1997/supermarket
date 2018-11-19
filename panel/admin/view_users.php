@@ -22,6 +22,6 @@ while($row=mysqli_fetch_assoc($view_users)){
     echo "<td><a href='#edit' onclick='passId($id)' data-toggle='modal' title='edit users info' class='btn btn-primary'><i class='fa fa-edit'></i></a> &nbsp <a href='users.php?id=$id' title='delete user' class='btn btn-danger'><i class='fa fa-trash'></i></a> &nbsp <a href='users.php?user_id=$id' title='view users password' class='btn btn-info'><i class='fa fa-eye'></i></a></td>";    
     echo "</tr>";
 }
-    echo "</table>";
+    echo "</table>"; 
     echo "</div>";
 ?>

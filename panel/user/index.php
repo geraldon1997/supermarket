@@ -1,6 +1,6 @@
 <?php
 include 'layouts/master.php';
-
+include '../../config.php';
 ?>
 
 

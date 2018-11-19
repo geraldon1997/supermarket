@@ -163,7 +163,7 @@
 						</div>
 					</div>
         </div>
-        
+         
         <div class="col-md-12">
 					<div class="form-group">
 						<div class="input-group has-icon">
@@ -204,6 +204,14 @@
 </div>
 
 <!-- End of add new staff -->
+
+<script>
+    function passId(id){
+        $("#edit_id").val(id);
+        // alert(id);
+    }
+</script>
+
 
 <?php endblock() ?>    
 

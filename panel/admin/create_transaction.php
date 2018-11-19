@@ -1,6 +1,7 @@
 <?php
 include '../../links/db.php';
-session_start();
+include '../../config.php';
+session_start(); 
 if(isset($_POST['create_transaction'])){
     if(!empty($_POST['t_s']) && !empty($_POST['t_pro']) && !empty($_POST['t_q']) && !empty($_POST['t_a']) && !empty($_POST['t_b']) && !empty($_POST['t_pri']) && !empty($_POST['t_i'])){
         
@@ -41,8 +42,8 @@ if(isset($_POST['create_transaction'])){
                     $sql4="UPDATE `arrivals` SET `status`='part payment' WHERE `invoice`='$t_i' ";
                     $update_part_payment=mysqli_query($con, $sql4);
                 
-                }
-                 header('location:http://localhost/bica/panel/admin/supplies.php');
+                } 
+                header('location:'.$base_url.'panel/admin/supplies.php');
             }
         }elseif($t_a == 0){
             echo "please enter a valid amount";
